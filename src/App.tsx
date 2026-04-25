@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { BottomNav } from './components/BottomNav';
 import { RecipeDetailView } from './components/RecipeDetailView';
 import {
@@ -46,7 +46,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<TabId>('save');
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <RecipesProvider>
           <CurrentWeekProvider>
@@ -65,6 +65,6 @@ export default function App() {
           </CurrentWeekProvider>
         </RecipesProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
